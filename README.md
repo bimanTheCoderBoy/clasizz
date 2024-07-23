@@ -49,11 +49,11 @@ To get a local copy up and running, follow these simple steps.
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/classroom-app-backend.git
+    git clone https://github.com/bimanTheCoderBoy/clasizz
     ```
 2. Navigate to the project directory:
     ```bash
-    cd classroom-app-backend
+    cd clasizz
     ```
 3. Install dependencies:
     ```bash
@@ -64,21 +64,18 @@ To get a local copy up and running, follow these simple steps.
 
 1. Create a `.env` file in the root directory and add the following environment variables:
     ```plaintext
-    PORT=5000
+    PORT=4000
     MONGO_URI=your_mongo_database_uri
     JWT_SECRET=your_jwt_secret_key
     ```
 
 2. Start the server:
     ```bash
-    npm start
+    npm run dev
     ```
 
-3. The backend server will be running on `http://localhost:5000`.
+3. The backend server will be running on `http://localhost:4000`.
 
-## API Documentation
-
-The API documentation provides detailed information about the available endpoints and how to use them. You can access the API documentation at `http://localhost:5000/api-docs` after starting the server.
 
 ## Contributing
 
