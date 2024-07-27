@@ -23,6 +23,6 @@ const classSchema = new Schema({
         
     }
 
-},{timestamps})
+},{timestamps:true})
 
 export const Class=model("Class",classSchema);

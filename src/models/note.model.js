@@ -15,6 +15,6 @@ const noteSchema = new Schema({
         required:true,
         trim:true,
     }
-},{timestamps})
+},{timestamps:true})
 
 export const Note=model("Note",noteSchema);

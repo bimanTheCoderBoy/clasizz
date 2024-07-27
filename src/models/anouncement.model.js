@@ -21,6 +21,6 @@ const anouncementSchema = new Schema({
         trim:true
     }
 
-},{timestamps})
+},{timestamps:true})
 
 export const Anouncement=model("Anouncement",anouncementSchema);
