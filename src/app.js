@@ -13,11 +13,11 @@ app.use(express.urlencoded( { extended : true,limit:'16kb' } ))
 app.use(cookieParser())
 
 //Routes
+import {userRouter} from './routes/user.route.js'
+app.use('/api/v1/user', userRouter)
 
 
-
-
-//Error handlers
-// import {errorHandler} from './utils/errorHandler.js'
-// app.use(errorHandler)
+// Error handlers
+import {errorHandler} from './utils/errorHandler.js'
+app.use(errorHandler)
 export default app

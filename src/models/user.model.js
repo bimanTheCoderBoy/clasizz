@@ -11,9 +11,34 @@ const userSchema = new Schema({
     type: String,
     required: true,
     trim: true,
-    
+    unique:true
   },
-});
+  profilePicture: {
+    type: String,
+    default: "abc.png",
+  },
+  password:{
+    type: String,
+    required: true,
+    minlength: 6
+  },
+  InstituteCode:{
+    type: Number,
+    required: true,
+    trim: true,
+    default:()=>Math.floor(Math.random()*100000)
+  },
+  requestSend:{
+    type:[{type:Schema.Types.ObjectId
+      , ref:"User"
+    }]
+  },
+  requestAccess:{
+    type:[{type:Schema.Types.ObjectId
+      , ref:"User"
+    }]
+  }
+},{timestamps:true});
 userSchema.pre("save", async function (next) {
   if (this.isModified("password")) {
     this.password = await bcrypt.hash(this.password, 10);
